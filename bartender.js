@@ -7,7 +7,7 @@
 		TwitterAPI = require('./twitterapi');
 
 	var Bartender = function() {
-		var config = JSON.parse(fs.readFileSync("config.json"));
+		var config = require("./config.json");
 		this.twitterAPI = new TwitterAPI(config.account, config.apiKey, config.apiSecret, config.accessToken, config.accessTokenSecret);
 
 		this.db = {
