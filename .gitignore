@@ -3,3 +3,5 @@ npm-debug.log
 *~
 *.swp
 config.json
+*.iml
+.idea

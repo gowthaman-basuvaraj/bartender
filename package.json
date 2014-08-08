@@ -9,16 +9,22 @@
     },
     "dependencies": {
         "co": "*",
+        "co-sleep": "*",
         "thunkify": "*",
-		"nedb": "*",
-		"node-twitter-api": "*"
+        "nedb": "*",
+        "node-twitter-api": "*",
+        "moment": "*",
+        "datejs": "*",
+        "meetup-api": "*"
     },
     "devDependencies": {
         "mocha": "*",
         "should": "*"
     },
-    "engines": { "node": ">= 0.11.9" },
+    "engines": {
+        "node": ">= 0.11.9"
+    },
     "keywords": ["build", "tasks"],
-    "license" : "GPL-3.0+"
+    "license": "GPL-3.0+"
 }
 
