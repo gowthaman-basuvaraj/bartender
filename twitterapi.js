@@ -161,7 +161,7 @@
         //0.1 guys tomorrow
         //0.2 guys
 
-        //1.0 tomorrow 6pm
+        //1.0 tomorrow 6pm <- should match here and we'll return
         //1.1 tomorrow
 
         //2.0 6pm
@@ -193,7 +193,15 @@
 
 
     TwitterAPI.prototype.parseMentions = function (item) {
-        return [];
+        return item.text.split(" ").filter(function(token){
+            return token && token.length > 0 && !token.match(mentions_regex);
+        });
+    }
+
+    TwitterAPI.prototype.parseHashtags = function (item) {
+        return item.text.split(" ").filter(function(token){
+            return token && token.length > 0 && !token.match(hash_regex);
+        });
     }
 
 

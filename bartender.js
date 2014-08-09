@@ -22,7 +22,8 @@
             while (true) {
                 try {
                     yield this.read();
-                    yield sleep(60 * 1000);
+                    console.log(new Date())
+                    yield sleep(6 * 1000);
                 }
                 catch (ex) {
                     yield this.log(ex);
