@@ -143,7 +143,7 @@
         //date_js does not work with other arbitrary stuff, may be we can tokenize and then
         //try to parse parts of it
 
-        //say: @beer guys tommorrow 6pm #fun
+        //say: @beer guys tomorrow 6pm #fun
 
         //to optimize may be we can remove well known item, say @mentions #hashtags
 
