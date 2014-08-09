@@ -140,7 +140,7 @@
      * {Friday, Tomorrow, 2nd May, May 2nd, May 2, 2 May} ['', ',', 'at'] {10AM, 10 AM}
      */
     TwitterAPI.prototype.parseTime = function (item) {
-        //date_js does not work with other arbitary stuff, may be we can tokenize and then
+        //date_js does not work with other arbitrary stuff, may be we can tokenize and then
         //try to parse parts of it
 
         //say: @beer guys tommorrow 6pm #fun
@@ -167,13 +167,14 @@
         //2.0 6pm
 
         //the first match we'll take it as datetime
-        var idx = 0, max_len = filtered_tokens.length,
+        var idx = 0,
+            max_len = filtered_tokens.length,
             idx_inner = 0;
 
         for (idx = 0; idx < max_len; idx++) {
             for (idx_inner = max_len; idx_inner > idx; idx_inner--) {
 
-                var new_text = filtered_tokens.slice(idx, idx_inner);
+                var new_text = filtered_tokens.slice(idx, idx_inner).join(" ");
 
                 var parsed_date = date_js.parse(new_text);
                 if (parsed_date)
